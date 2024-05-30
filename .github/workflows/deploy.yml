@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v2
@@ -25,14 +25,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to prod url
-        # main is the branch name where new code is pushed
-        if: github.ref == 'refs/heads/main'
-
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: dist # The folder the action should deploy.
 
 # it might through permission error during deployment,
 # go the repo settings, Action > General > Workflow permissions
