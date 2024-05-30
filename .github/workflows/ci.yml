@@ -65,7 +65,34 @@ jobs:
       with:
         host: 13.233.66.146
         username: ec2-user
-        key: ./gopal2.pem
+        key: |
+          -----BEGIN RSA PRIVATE KEY-----
+          MIIEpQIBAAKCAQEAvuHFo5RNkFZl0e/60iy+LlrNTsscAzS1OmgpLwq5k3P9VCfP
+          lwRJdfI7q5/jx2I5o9aFERfS+59rRSpEKAzP9SUvJl38C/Me4DH0V3eyW4srV4Ru
+          SVeZvv9lvsSBQxg7YmGPQenUM0MoLoT3nqXjwWpPhV2SNJeSPy1hiMdBPCTcuq4v
+          6gkwdnPLh1W4OkOtCkLs/QkVsQ5boPAAZKg706tCzGYSjtkbu1DkHEq9kyFT+QIk
+          tlpIOk0wjWn9CK6Vgk7ek/AZu7TxkdbO8rxMtQF3RiAr4CxiEIuVLfjNbSq+tros
+          85k4/02v4niJH0YYhhh9Dn7rWPzFU4zxFTXkawIDAQABAoIBAQCS1ECfL7jqSktQ
+          TfT2Lwyrw5UiAwKtRKITJ4Rmdy2AyzwWu/jnBZksbQSRZBBmkpwb9yusllLo0xxE
+          u9pppFFjFRNLxAfZeU5KzqJRlfVQjaDtVSUwrX3KedLeB3IXFlC3wKvd2+wq8oG6
+          JvYCx0CGyywYPn30jpMkndfkysDXbX9U+/jIDlf1u4SVCJiqVmnPjdbJGPEtO69y
+          TWoT1Cz2CmA4Mhi9Kud8kbKYHp71FNqftOHq1+8sJ5lTyReuIqwHBJJSckMRGa3d
+          U5zS6di6l6/YOA++hR3VnOeKvRNEy8/pBqaTiqQWPX2NN5WjuZXOghNQLQXQsSeV
+          cS9kVDAhAoGBAONbe8H2uet9Yvj14Co1qICT34lRB3+EWGa76NdLYs1TX07KM+5j
+          25Zv5Wg40dBGUotHTlvMFLbdUkda1rImqj9fDcuvuHXh/MWyW260pT6LO2rThind
+          6NIP4ngH1dByJZvKhipEnjlYA0+9ghLa/W6hiqBiarGl0+UJTqaaX1r1AoGBANbt
+          6sHxZ5qXGb+Stmy18KYA0g+adRz/sZDN4zSMeRUnrROfTWAyCmVDp4hFIRmQEFWU
+          ZMfhbSWasjRbfjXxybQIzdqRzloebui0RPz2QEV+FtcBcMDKzltb1H7qWn4OyfZP
+          2Al08OzrtztileGaJjSl2YRsNuOQy8L8a/hEV2XfAoGBANkrIWN80Mpn0ooMEjs/
+          Vdy7YuI/S/I58FbxVs+PaqjF4lvYORKUv8NKzs5mt8NB6MaxLd/xaDfj4BvYYQt6
+          c1Rk70CIcKHpYxFT9JIia1T6mZ7IvXZwSVudYK1Wjp206seNA+qL8LbFoyQf2Ic6
+          NqneFBRu7YsS4vv7j+0Dt+GhAoGAUUk16he0yUCwWkXQfJjq5L2WtJQECu2haFSV
+          w4AFIz0YNj2fc+w5BkdqCx2qARL9OoCfBQF62CgDkc2wlBJX6KETycAvPOIZrCTR
+          mqI/eIjRdoty61dIaED4wu87PkW1mFRmLl1t6QzVBb6pVOOJ44t+EpkiwTo39gyl
+          gQXH0B0CgYEAhYbEUwRT8JWaGJ0YWWulpH0qIGAWSEkLD+WJeqBwbZI6DGujHt2U
+          gntKPfDqewD2JmCN5sNcdYwnRrHuQnsFX9k669KhGYGT+h/5d5w4rRpCq32X/39d
+          EYYkhEjnzT2iv4NNvsteMM77Wp8y05qe5nrc9CZIqtqYImHNN4NEV9I=
+          -----END RSA PRIVATE KEY-----
         script: |
           cd dist
           npm install -g serve
