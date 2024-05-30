@@ -29,6 +29,7 @@ jobs:
         run: |
           cd dist
           npm install -g serve
+          npm start &
 
 
 # it might through permission error during deployment,
