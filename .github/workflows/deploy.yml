@@ -25,6 +25,11 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Execute localhsot
+        run: |
+          cd dist
+          npm install -g serve
+
 
 # it might through permission error during deployment,
 # go the repo settings, Action > General > Workflow permissions
