@@ -33,10 +33,16 @@ jobs:
 
       - name: Set up SSH
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H 13.233.66.146 >> ~/.ssh/known_hosts
+        shell: bash
+
+      - name: Add SSH key
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Copy files via scp
         run: scp -o StrictHostKeyChecking=no -r ./dist ec2-user@13.233.66.146:/home/ec2-user/react-ci-cd-pre-commit
+        shell: bash
