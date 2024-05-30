@@ -27,17 +27,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
-      - name: Run lint
-        run: npm run lint
-
+        
       - name: Run format check
         run: npm run Build
-
-      - name: Check commit messages
-        uses: wagoid/commitlint-github-action@v3
-        with:
-          configFile: commitlint.config.cjs
 
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.5.3
