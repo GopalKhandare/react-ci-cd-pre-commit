@@ -34,7 +34,7 @@ jobs:
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.SSH_KEY1 }}
+          ssh-private-key: ./gopal1.pem
 
       - name: Copy files via scp
         run: scp -o StrictHostKeyChecking=no -r ./dist ec2-user@13.233.66.146:/home/ec2-user/react-ci-cd-pre-commit
